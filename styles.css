@@ -49,7 +49,6 @@
   #main {
     transition: margin-left .5s;
     padding: 16px;
-    background-color: lightblue;
   }
   @media screen and (max-height: 450px) {
       .sidebar {padding-top: 15px;}
@@ -67,4 +66,8 @@
   }
   #side:hover a {
     top: -10px;
+  }
+
+  #body{
+    background-color: lightblue;
   }
