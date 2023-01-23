@@ -59,12 +59,12 @@
     top: 0px;
     padding: 10px 0px;
 }
-#side a {
+.side a {
   position: relative;
   top: 0;
   transition: top ease 0.5s;
 }
-#side:hover a {
+.side:hover a {
   top: -10px;
 }
 body {
