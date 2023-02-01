@@ -18,7 +18,7 @@ function process(){
     document.getElementById("avg").innerHTML = avg;
     document.getElementById("pro").innerHTML = pro;
 }
-function clear(){
+function empty(){
     document.getElementById("sum").innerHTML = "";
     document.getElementById("avg").innerHTML = "";
     document.getElementById("pro").innerHTML = "";
@@ -32,7 +32,7 @@ function clear(){
         <input type="number" id="int2">
         <input type="number" id="int3">
         <input type="button" value="PROCESS" onclick="process();">
-        <input type="button" value="CLEAR" onclick="clear();">
+        <input type="button" value="CLEAR" onclick="empty();">
     </form>
     <table id="tab" style="display: none;">
         <tr>
