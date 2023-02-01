@@ -5,9 +5,11 @@
 <title>jQuery Ex 1</title>
 <script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
 <script>
+    var div1 = "<div style='color:red; font-family:Times New Roman'>xy </div>"
+    div1 += "<div style='color:blue; font-family:Arial'>12 </div>"
+    div1 += "<div style='color:green; font-family:Impact'><i>89</i></div>"
 $(document).ready(function(){
-    $("#div1").html("<div style='color:red; font-family:Times New Roman'>xy</div>");
-    $("#div1.1").css("color:red; font-family:Times New Roman");
+    $("#div1").html(div1);
 });
 
 </script>
