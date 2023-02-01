@@ -18,6 +18,8 @@ function process(){
     document.getElementById("sum").innerHTML = sum;
     document.getElementById("avg").innerHTML = avg;
     document.getElementById("pro").innerHTML = pro;
+    document.getElementById("min").innerHTML = min;
+    document.getElementById("max").innerHTML = max;
     if (int1 == "" || int2 == "" || int3 == ""){
         document.getElementById("alert").innerHTML = "We encountered an error... please make sure to input numbers into all three boxes"
     }
@@ -35,12 +37,10 @@ function empty(){
     document.getElementById("int2").value = "";
     document.getElementById("int3").value = "";
 }
-var clicks = 0;
-$("PROCESS").click(function(){
-    if (clicks < 1){
-        $("table").fadeIn("slow");
-    }
-    clicks++;
+$(document).ready(function(){
+  $("#PROCESS").click(function(){
+    $("#results").fadeIn();
+});
 });
 
 </script>
