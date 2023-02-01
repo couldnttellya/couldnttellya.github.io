@@ -7,12 +7,12 @@
 <script>
 
 function process(){
-    const int1 = number(document.getElementById("int1").value);
-    const int2 = number(document.getElementById("int2").value);
-    const int3 = number(document.getElementById("int3").value);
-    const sum = int1 + int2 + int3;
-    const avg = sum/3;
-    const pro = int1 * int2 * int3;
+    const int1 = document.getElementById("int1").value;
+    const int2 = document.getElementById("int2").value;
+    const int3 = document.getElementById("int3").value;
+    const sum = number(int1) + number(int2) + number(int3);
+    const avg = number(sum)/3;
+    const pro = number(int1) * number(int2) * number(int3);
     document.getElementById("tab").style.display = "block";
     document.getElementById("sum").innerHTML = sum;
     document.getElementById("avg").innerHTML = avg;
