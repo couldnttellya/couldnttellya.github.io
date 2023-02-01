@@ -3,7 +3,7 @@ function process(){
     const int2 = Number(document.getElementById("int2").value);
     const int3 = Number(document.getElementById("int3").value);
     const sum = Number(int1) + Number(int2) + Number(int3);
-    const avg = Number(sum)/3;
+    const avg = Math.round(Number(sum)/3);
     const pro = Number(int1) * Number(int2) * Number(int3);
     const max = Math.max(int1,int2,int3)
     const min = Math.min(int1,int2,int3)
@@ -37,6 +37,7 @@ $(document).ready(function(){
         $("#results").fadeIn(2000);
     });
 });
+
 
 var a = document.getElementById("CLEAR");
 var b = document.getElementById("PROCESS");

@@ -1,4 +1,16 @@
 table, th, td{
     border: 2px solid;
     text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+#buttons{
+    padding:5px; 
+}
+label{
+    padding: 5px;
+}
+table td {
+    width: 110px;
+    word-wrap: break-word;
 }
