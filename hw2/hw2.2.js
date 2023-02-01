@@ -21,10 +21,8 @@ function process(){
         document.getElementById("min").innerHTML = min;
         document.getElementById("max").innerHTML = max;
         if(table = false){
-            $("#PROCESS").click(function(){
                 $("#results").fadeIn(2000);
                 table = true;
-            });
         }
     }
 }
