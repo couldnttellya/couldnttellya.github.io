@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>jQuery Ex 1</title>
+<title>Homework 2 Problem 2</title>
 <script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
 <script>
 function process(){
-    const int1 = document.getElementById("int1").value;
-    const int2 = document.getElementById("int2").value;
-    const int3 = document.getElementById("int3").value;
+    const int1 = Number(document.getElementById("int1").value);
+    const int2 = Number(document.getElementById("int2").value);
+    const int3 = Number(document.getElementById("int3").value);
     const sum = Number(int1) + Number(int2) + Number(int3);
     const avg = Number(sum)/3;
     const pro = Number(int1) * Number(int2) * Number(int3);
+    const max = Math.max(int1,int2,int3)
+    const min = Math.min(int1,int2,int3)
     document.getElementById("results").style.display = "block";
     document.getElementById("sum").innerHTML = sum;
     document.getElementById("avg").innerHTML = avg;
@@ -27,10 +29,19 @@ function empty(){
     document.getElementById("sum").innerHTML = "";
     document.getElementById("avg").innerHTML = "";
     document.getElementById("pro").innerHTML = "";
+    document.getElementById("min").innerHTML = "";
+    document.getElementById("max").innerHTML = "";
     document.getElementById("int1").value = "";
     document.getElementById("int2").value = "";
     document.getElementById("int3").value = "";
 }
+var clicks = 0;
+$("PROCESS").click(function(){
+    if (clicks < 1){
+        $("table").fadeIn("slow");
+    }
+    clicks++;
+});
 
 </script>
 </head>
@@ -39,20 +50,24 @@ function empty(){
         <input type="number" id="int1">
         <input type="number" id="int2">
         <input type="number" id="int3">
-        <input type="button" value="PROCESS" onclick="process();">
-        <input type="button" value="CLEAR" onclick="empty();">
+        <input type="button" value="PROCESS" id="PROCESS" onclick="process();">
+        <input type="button" value="CLEAR" id="CLEAR" onclick="empty();">
     </form>
     <table id="results" style="display: none;">
         <tr>
             <th>Sum</th>
             <th>Average</th>
             <th>Product</th>
+            <th>Smallest</th>
+            <th>Largest</th>
         </tr>
         <hr>
         <tr>
             <td id="sum"></td>
             <td id="avg"></td>
             <td id="pro"></td>
+            <td id="min"></td>
+            <td id="max"></td>
         </tr>
     </table>
     <p id="alert"></p>
