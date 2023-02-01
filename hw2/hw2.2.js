@@ -32,11 +32,13 @@ function empty(){
     document.getElementById("int3").value = "";
 }
 
+if (int1 == "" || int2 == "" || int3 == ""){
 $(document).ready(function(){
     $("#PROCESS").click(function(){
         $("#results").fadeIn(2000);
     });
 });
+}
 
 
 var a = document.getElementById("CLEAR");
