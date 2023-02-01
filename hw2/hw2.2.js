@@ -1,3 +1,4 @@
+var table = false;
 function process(){
     const int1 = Number(document.getElementById("int1").value);
     const int2 = Number(document.getElementById("int2").value);
@@ -19,6 +20,12 @@ function process(){
         document.getElementById("pro").innerHTML = pro;
         document.getElementById("min").innerHTML = min;
         document.getElementById("max").innerHTML = max;
+        if(table = false){
+            $("#PROCESS").click(function(){
+                $("#results").fadeIn(2000);
+                table = true;
+            });
+        }
     }
 }
 function empty(){
@@ -31,15 +38,6 @@ function empty(){
     document.getElementById("int2").value = "";
     document.getElementById("int3").value = "";
 }
-
-if (int1 == "" || int2 == "" || int3 == ""){
-$(document).ready(function(){
-    $("#PROCESS").click(function(){
-        $("#results").fadeIn(2000);
-    });
-});
-}
-
 
 var a = document.getElementById("CLEAR");
 var b = document.getElementById("PROCESS");
