@@ -5,6 +5,10 @@
 <title>Homework 2 Problem 2</title>
 <script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
 <script>
+var a = document.getElementById("CLEAR");
+var b = document.getElementById("PROCESS");
+a.document.addEventListener("click", empty)
+b.document.addEventListener("click", process)
 function process(){
     const int1 = Number(document.getElementById("int1").value);
     const int2 = Number(document.getElementById("int2").value);
@@ -16,6 +20,7 @@ function process(){
     const min = Math.min(int1,int2,int3)
     if (int1 == "" || int2 == "" || int3 == ""){
         document.getElementById("alert").innerHTML = "We encountered an error... please make sure to input numbers into all three boxes"
+        empty();
     }
     else{
         document.getElementById("alert").innerHTML = ""
@@ -50,8 +55,8 @@ $(document).ready(function(){
         <input type="number" id="int1">
         <input type="number" id="int2">
         <input type="number" id="int3">
-        <input type="button" value="PROCESS" id="PROCESS" onclick="process();">
-        <input type="button" value="CLEAR" id="CLEAR" onclick="empty();">
+        <input type="button" value="PROCESS" id="PROCESS">
+        <input type="button" value="CLEAR" id="CLEAR">
     </form>
     <table id="results" style="display: none;">
         <tr>
