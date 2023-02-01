@@ -7,7 +7,16 @@
 <script>
 
 function process(){
-    var int1 = document.getElementById("int1").value
+    var int1 = document.getElementById("int1").value;
+    var int2 = document.getElementById("int2").value;
+    var int3 = document.getElementById("int3").valuel;
+    var sum = int1 + int2 + int3;
+    var avg = sum/3;
+    var pro = int1 * int2 * int3;
+    document.getElementById("tab").style.display = "block";
+    document.getElementById("sum").innerHTML = sum;
+    document.getElementById("avg").innerHTML = avg;
+    document.getElementById("pro").innerHTML = pro;
 }
 
 </script>
@@ -19,5 +28,18 @@ function process(){
         <input type="number" id="int3">
         <input type="button" value="PROCESS" onclick="process();">
     </form>
+    <table id="tab" style="display: none;">
+        <row>
+            <th>Sum</th>
+            <th>Average</th>
+            <th>Product</th>
+        </row>
+        <hr>
+        <row>
+            <td id="sum"></td>
+            <td id="avg"></td>
+            <td id="pro"></td>
+        </row>
+    </table>
 </body>
 </html>
