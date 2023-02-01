@@ -1,3 +1,4 @@
+var table = false;
 function process(){
     const int1 = Number(document.getElementById("int1").value);
     const int2 = Number(document.getElementById("int2").value);
@@ -9,9 +10,10 @@ function process(){
     const min = Math.min(int1,int2,int3)
     if (int1 == "" || int2 == "" || int3 == ""){
         document.getElementById("alert").innerHTML = "We encountered an error... please make sure to input numbers into all three boxes"
-        empty();
+        emptytable();
     }
-    else{
+    else {
+        table = true;
         document.getElementById("alert").innerHTML = ""
         //document.getElementById("results").style.display = "block";
         document.getElementById("sum").innerHTML = sum;
@@ -31,10 +33,19 @@ function empty(){
     document.getElementById("int2").value = "";
     document.getElementById("int3").value = "";
 }
+function emptytable(){
+    document.getElementById("sum").innerHTML = "";
+    document.getElementById("avg").innerHTML = "";
+    document.getElementById("pro").innerHTML = "";
+    document.getElementById("min").innerHTML = "";
+    document.getElementById("max").innerHTML = "";
+}
 
 $(document).ready(function(){
     $("#PROCESS").click(function(){
-        $("#results").fadeIn(2000);
+        if(table){
+            $("#results").fadeIn(2000);
+        }
     });
 });
 
@@ -46,4 +57,5 @@ a.addEventListener("click", empty);
 }
 if(b){
 b.addEventListener("click", process);
+
 }
