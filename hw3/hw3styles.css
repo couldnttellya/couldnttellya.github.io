@@ -1,0 +1,17 @@
+.grades {
+    padding: 2em;
+}
+label {
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+}
+.container {
+    width: 500px;
+    clear: both;
+  }
+  
+  .container input {
+    width: 100%;
+    clear: both;
+  }

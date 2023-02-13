@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="static/styles.css">
 <title>Joe's CNIT 133 hw3</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="hw3styles.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
@@ -53,9 +54,16 @@
               <li>you should have a textarea (or div or paragraph element) to present final results and/or error message</li>
             </ul>
           </p>
-          <form>
-            <label>1:<input type="number" id="homeworkAverage"></label><br>
-          </form>
+          <div class="container">
+            <form id="grades">
+              <label>Homework Average: <input type="number" id="hwAverage"></label><br>
+              <label>Mid-Term Grade: <input type="number" id="midTerm"></label><br>
+              <label>Final Grade: <input type="number" id="final"></label><br>
+              <label>Participation Score: <input type="number" id="partic"></label><br>
+              <label><input type="submit" id="submit"></label><br>
+              <label><button type="button" id="clear">Clear</button></label><br>
+            </form>
+          </div>
         </div>
       </div>
     </div>
