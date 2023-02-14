@@ -9,9 +9,18 @@ label {
 .container {
     width: 500px;
     clear: both;
-  }
+}
   
-  .container input {
+.container input {
     width: 100%;
     clear: both;
-  }
+}
+
+#buttons {
+    display: inline-block;
+    margin: 0 auto;
+    width: calc(50% - 4px);
+}
+#tabs {
+    opacity: .5;
+}
