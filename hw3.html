@@ -8,25 +8,13 @@
 <link rel="stylesheet" href="hw3styles.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="hw3/hw3.js" defer></script>
 
-<script>
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-  }
-  $( function() {
-    $( "#tabs" ).tabs();
-  } );
-</script>
 
 </head>
 <body>
   <div id="mySidebar" class="sidebar">
-      <div class="side"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></div>
+      <div class="side"><a href="javascript:void(0)" class="closebtn" id="closebtn">×</a></div>
       <div class="side"><a href="/index.html">Home</a></div>
       <div class="side"><a href="/hw2.html">Homework 2</a></div>
       <div class="side"><a href="/hw3.html">Homework 3</a></div>
@@ -38,7 +26,7 @@
   </div>
   <div id="main">
     <div class="sticky-top">
-      <button class="openbtn" onclick="openNav()">☰</button>
+      <button class="openbtn" id="openbtn">☰</button>
       <div id="tabs">
         <ul>
           <li><a href="#tabs-1">Nunc tincidunt</a></li>
