@@ -20,7 +20,5 @@ label {
     display: inline-block;
     margin: 0 auto;
     width: calc(50% - 4px);
-}
-#tabs {
-    opacity: .5;
+    padding:5px;
 }
