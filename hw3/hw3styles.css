@@ -1,24 +1,21 @@
-.grades {
-    padding: 2em;
-}
-label {
-    display: inline-block;
-    width: 250px;
-    text-align: right;
-}
-.container {
-    width: 500px;
-    clear: both;
-}
-  
 .container input {
-    width: 100%;
+    width: 35%;
     clear: both;
+    display:inline-block;
 }
 
-#buttons {
+button {
     display: inline-block;
-    margin: 0 auto;
-    width: calc(50% - 4px);
+    margin-right: 10px;
     padding:5px;
+}
+form  { display: table;      }
+p     { display: table-row;  }
+label { 
+    display: table-cell; 
+    margin-left:20px;
+}
+input { 
+    display: table-cell; 
+    margin-left:20px;
 }

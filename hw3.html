@@ -4,8 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="static/styles.css">
 <title>Joe's Javascript Functions Homework for CNIT 133 at City College San Francisco</title>
+<link rel="icon" type="image/x-icon" href="/static/images/favicon2.1.png">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="hw3styles.css">
+<link rel="stylesheet" href="hw3/hw3styles.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="hw3/hw3.js" defer></script>
@@ -29,34 +30,25 @@
       <button class="openbtn" id="openbtn">☰</button>
       <div id="tabs">
         <ul>
-          <li><a href="#tabs-1">Homework 3.1</a></li>
+          <li><a href="#tabs-1">3.1 - Student Grades</a></li>
           <li><a href="#tabs-2">Homework 3.2</a></li>
           <li><a href="#tabs-3">Homework 3.3</a></li>
         </ul>
         <div id="tabs-1">
           <h1>Student Grades</h1>
-          <p>
-            <ul>
-              <li>a form with input boxes for Homework Average, Mid-Term Exam Score, Final Exam Score, and Participation - all those grades will be entered as integers</li>
-              <li>you should have a button for submitting the data and a button to clear the form</li>
-              <li>you should have a textarea (or div or paragraph element) to present final results and/or error message</li>
-            </ul>
-          </p>
+          <h3>Use the input boxes below to calculate your grade for a given class. Input your grade percentage for each section as a positive integer from 0-100 then hit the submit button to calculate your grade. </h3>
           <div class="container">
             <form class="grades">
-              <label>Homework Average: <input type="number" id="hwAverage"></label><br>
-              <label>Mid-Term Grade: <input type="number" id="midTerm"></label><br>
-              <label>Final Grade: <input type="number" id="final"></label><br>
-              <label>Participation Score: <input type="number" id="partic"></label><br>
-              <div id="buttons">
-                <label><input type="submit" class="buttons" id="submit"></label><br>
-                <label><button type="button" id="clear">Clear</button></label><br>
-              </div>
+              <p><label>Homework Average: </label><input type="number" id="hwAverage"><br></p>
+              <p><label>Mid-Term Exam Score: </label><input type="number" id="midTerm"><br></p>
+              <p><label>Final Exam Score: </label><input type="number" id="final"><br></p>
+              <p><label>Participation Score: </label><input type="number" id="partic"><br></p>
             </form>
-            <hr>
-            <div id="results">
-
-            </div>
+              <label><button type="button" id="submit">Submit</button></label>
+              <label><button type="button" id="clear">Clear</button></label><br>
+              <p id="alert"></p>
+              <hr>
+            <p id="results">Grade: % </p>
           </div>
         </div>
         <div id="tabs-2"></div>
