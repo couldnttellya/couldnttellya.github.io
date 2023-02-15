@@ -76,33 +76,28 @@ $(function () {
             }
         }
         $("#amountSold").val(amountSold);
-        $("#weeklyEarning").val("$" + (Math.round(weeklyEarning * 100) / 100));
-        
-        
-        //const item1 = Number($("#item1").val());
-        //const item2 = Number($("#item2").val());
-        //const item3 = Number($("#item3").val());
-        //const item4 = Number($("#item4").val());
-        //const it1pr = parseCurrency(1);
-        //const it2pr = parseCurrency(2);
-        //const it3pr = parseCurrency(3);
-        //const it4pr = parseCurrency(4);
-
-        //var it1pr = $("#item1Price").text();
-        //it1pr = Number(it1pr.replace(/[^0-9.-]+/g,""));
-        //var it2pr = $("#item2Price").text();
-        //it2pr = Number(it2pr.replace(/[^0-9.-]+/g,""));
-        //var it3pr = $("#item3Price").text();
-        //it3pr = Number(it3pr.replace(/[^0-9.-]+/g,""));
-        //var it4pr = $("#item4Price").text();
-        //it4pr = Number(it4pr.replace(/[^0-9.-]+/g,""));
-        //const test = parseCurrency(2); -- Testing to see if parseCurrency function works
-        //console.log(it1pr);
+        $("#weeklyEarning").val("$" + (250 + (.09 * (Math.round(weeklyEarning * 100) / 100))));
     });
-    //$("#clear2").click(function() {});
+    //clear button
+    $("#clear2").click(function() {
+        for(let i = 1; i <= 4; i++){
+            $("#item" + i).val("");
+        }
+    });
+    $("#f2c").click(function() {
+        const temp = Number($("#temp").val()); // get user input temp
+        const result = Math.round((5/9 * (temp - 32) * 10)) / 10; // convert farenheight to celcius
+        $("#textAreaResults").text(result);
+    });
+    $("#c2f").click(function() {
+        const temp = Number($("#temp").val()); // get user input temp
+        const result = Math.round(((9/5 * temp) + 32)  * 10) / 10; // convert farenheight to celcius
+        $("#textAreaResults").text(result);
+    });
 
 });
 
+// parse int from html where price values stored with leading $
 function parseCurrency(itemNum){
     const itemName = "#item" + itemNum + "Price";
     var price = $(itemName).text();

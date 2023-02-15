@@ -20,16 +20,41 @@ label {
     display: table-cell; 
     margin-left:20px;
 }
-input { 
+table input { 
     display: table-cell; 
     margin-left:20px;
 }
 .header {
     display:inline-block;
 }
-.totals input {
-    display:inline-block;
-    align-content:right;
-    width: 25%;
+.totals {
+   margin:20px;
+}
+.totals label {
+    overflow: hidden;
+    padding:5px;
+}
+.totals label input {
+    float:right;
+    clear:both;
+    margin-left:162px;
+}
+.salesItems input {
+    margin:2px;
+}
+#qtsldl {
+margin-top:5px;
+}
+#sellersName {
+    margin-bottom:10px;
+}
+#item1 #totTable{
+    margin-top:10px;
+}
+#convertForm input{
     margin: 5px;
+    padding:5px;
+}
+#textAreaResults {
+    width:250px;
 }

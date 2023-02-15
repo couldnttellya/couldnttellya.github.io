@@ -33,7 +33,7 @@
         <ul>
           <li><a href="#tabs-1">Part 1 - Student Grades</a></li>
           <li><a href="#tabs-2">Part 2 - Salespeople Salary</a></li>
-          <li><a href="#tabs-3">Homework 3.3</a></li>
+          <li><a href="#tabs-3">Part 3 - Temperature Converter</a></li>
         </ul>
         <div id="tabs-1">
           <h1>Student Grades</h1>
@@ -54,16 +54,15 @@
         </div>
         <div id="tabs-2">
           <h1>Part 2 - Salespeople Salary</h1>
-          <div id="inputs">
             <label title="Please make sure that the salesperson's name is spelled correctly">Sellers Name: <input type="text" id="sellersName"></label>
-            <p><b>For each item type the quantity sold by the seller</b></p>
+            <p id="qtsldl"><b>For each item type the quantity sold by the seller</b></p>
             <p class="salesItems"><label>Item 1: <input type="number" id="item1"></label></p>
             <p class="salesItems"><label>Item 2: <input type="number" id="item2"></label></p>
             <p class="salesItems"><label>Item 3: <input type="number" id="item3"></label></p>
             <p class="salesItems"><label>Item 4: <input type="number" id="item4"></label></p>
             <button type="button" class="ipbtns" id="submit2">Submit</button>
             <button type="button" class="ipbtns" id="clear2">Clear Form</button>
-            <table>
+            <table id="totTable">
               <tr>
                 <th class="salesTHead">Item #</th>
                 <th class="salesTHead">Price</th>
@@ -73,34 +72,43 @@
               <tr>
                 <td>1</td>
                 <td id="item1Price" value="20.99">$20.99</td>
-                <td><input class="salesItems" id="it1q"></td>
-                <td><input class="salesItems" id="it1t"></td>
+                <td><input class="salesItems" id="it1q" readonly="readonly"></td>
+                <td><input class="salesItems" id="it1t" readonly="readonly"></td>
               </tr>
               <tr>
                 <td>2</td>
                 <td id="item2Price" value="12.75">$12.75</td>
-                <td><input class="salesItems" id="it2q"></td>
-                <td><input class="salesItems" id="it2t"></td>
+                <td><input class="salesItems" id="it2q" readonly="readonly"></td>
+                <td><input class="salesItems" id="it2t" readonly="readonly"></td>
               </tr>
               <tr>
                 <td>3</td>
                 <td id="item3Price" value="9.95">$9.95</td>
-                <td><input class="salesItems" id="it3q"></td>
-                <td><input class="salesItems" id="it3t"></td>
+                <td><input class="salesItems" id="it3q" readonly="readonly"></td>
+                <td><input class="salesItems" id="it3t" readonly="readonly"></td>
               </tr>
               <tr>
                 <td>4</td>
                 <td id="item4Price" value="35.89">$35.89</td>
-                <td><input class="salesItems" id="it4q"></td>
-                <td><input class="salesItems" id="it4t"></td>
+                <td><input class="salesItems" id="it4q" readonly="readonly"></td>
+                <td><input class="salesItems" id="it4t" readonly="readonly"></td>
               </tr>
             </table>
             <p id="alert2"></p>
-            <p class="totals"><label>Total Amount Sold<input class="totAlign" id="amountSold"></label></p>
-            <p class="totals"><label>Total Weekly Earnings<input class="totAlign" id="weeklyEarning"></label></p>
-          </div>
+            <p class="totals"><label>Total Amount Sold<input id="amountSold" readonly="readonly"></label></p>
+            <p class="totals"><label>Total Weekly Earnings<input id="weeklyEarning" readonly="readonly"></label></p>
         </div>
-        <div id="tabs-3"></div>
+        <div id="tabs-3">
+          <h1>Temperature Converter</h1>
+          <h2>Convert From Farenheight to Celcius and Vice Versa</h2>
+          <form id="convertForm">
+            <label><h3>Input a temperature to convert:</h3> </label><input type="number" id="temp">
+          </form>
+          <button type="button" id="f2c">Convert Farenheight to Celcius</button>
+          <button type="button" id="c2f">Convert Celcius to Farenheight</button>
+          <hr>
+          <textarea id="textAreaResults" readonly="readonly">Results will be displayed here</textarea>
+        </div>
       </div>
     </div>
   </div>
