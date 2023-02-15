@@ -4,13 +4,18 @@
     display:inline-block;
 }
 
-button {
+.ipbtns {
     display: inline-block;
     margin-right: 10px;
     padding:5px;
+    margin-top: 10px;
 }
-form  { display: table;      }
-p     { display: table-row;  }
+form  { 
+    display: table;      
+}
+p     { 
+    display: table-row;  
+}
 label { 
     display: table-cell; 
     margin-left:20px;
@@ -18,4 +23,13 @@ label {
 input { 
     display: table-cell; 
     margin-left:20px;
+}
+.header {
+    display:inline-block;
+}
+.totals input {
+    display:inline-block;
+    align-content:right;
+    width: 25%;
+    margin: 5px;
 }
