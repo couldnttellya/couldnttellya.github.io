@@ -14,6 +14,9 @@ $(function () {
         $("#main").css("marginLeft", "250px");
     });
 
+
+    // PART 1
+
     $("#clear").click(function () {
         $("#hwAverage").val(" ");
         $("#midTerm").val(" ");
@@ -55,6 +58,10 @@ $(function () {
 
         }
     });
+
+    // PART 2
+
+
     // tooltip hover on item displays html title
     $(document).tooltip();
 
@@ -84,6 +91,9 @@ $(function () {
             $("#item" + i).val("");
         }
     });
+
+    // PART 3
+
     $("#f2c").click(function() {
         const temp = Number($("#temp").val()); // get user input temp
         const result = Math.round((5/9 * (temp - 32) * 10)) / 10; // convert farenheight to celcius
@@ -93,6 +103,41 @@ $(function () {
         const temp = Number($("#temp").val()); // get user input temp
         const result = Math.round(((9/5 * temp) + 32)  * 10) / 10; // convert farenheight to celcius
         $("#textAreaResults").text(result);
+    });
+
+    
+    function getRandom() {
+        const ran1 = Math.floor(Math.random(10) * 10);
+        const ran2 = Math.floor(Math.random(10) * 10);
+        $("#ran1").text(ran1);
+        $("#ran2").text(ran2);
+    }
+    getRandom();
+
+    // User submits answer
+    $("#submit3").click(function() {
+        const userAnswer = $("#userAnswer").val();
+        const ran1 = Number($("#ran1").text());
+        const ran2 = Number($("#ran2").text());
+        if (userAnswer == ran1 * ran2){
+            $("#ansArea").text("Very good! Would you like to answer another question?");
+            $(".ansBtn").css("display", "inline");
+            console.log("correct answer");
+        } else {
+            $("#ansArea").text("No. Please try again.");
+            $(".ansBtn").css("display", "none");
+            console.log("incorrect answer");
+        }
+    });
+    // User click yes on answer another
+    $("#ansBtnY").click(function() {
+        getRandom();
+        $(".ansBtn").css("display", "none");
+    });
+    // User cick no on answer another
+    $("#ansBtnN").click(function() {
+        $("#ansArea").text("Thanks for playing, see you next time!");
+        $(".ansBtn").css("display", "none");
     });
 
 });
