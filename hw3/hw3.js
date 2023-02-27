@@ -105,7 +105,7 @@ $(function () {
         $("#textAreaResults").text(result);
     });
 
-    
+    //function to generate 2 random numbers then insert into html on page
     function getRandom() {
         const ran1 = Math.floor(Math.random(10) * 10);
         const ran2 = Math.floor(Math.random(10) * 10);
@@ -140,6 +140,15 @@ $(function () {
         $(".ansBtn").css("display", "none");
     });
 
+    $("#tb5").click(function(){
+        $("#tabs").css("display", "none");
+        $("#respawnButton").css("display", "block");
+    });
+    $("#respawnButton").click(function(){
+        $("#tabs").css("display", "block");
+        $("#respawnButton").css("display", "none");
+    });
+
 });
 
 // parse int from html where price values stored with leading $
@@ -149,3 +158,4 @@ function parseCurrency(itemNum){
     price = Number(price.replace(/[^0-9.-]+/g,""));
     return price;
 }
+
