@@ -75,3 +75,9 @@ margin-top:5px;
     margin:15px;
     overflow:auto;
 }
+#tabs {
+    display:block;
+}
+#respawnButton {
+    display:none;
+}
