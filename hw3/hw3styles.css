@@ -68,3 +68,10 @@ margin-top:5px;
 #tabs-4 {
     margin:15px;
 }
+#sellersName {
+    margin-top:15px;
+}
+#howMuch {
+    margin:15px;
+    overflow:auto;
+}
