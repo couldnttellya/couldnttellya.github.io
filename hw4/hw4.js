@@ -117,7 +117,7 @@ $(function () {
                 for(let j = 0; j < size; j++){$("#displayArea").append("*");}
                 $("#displayArea").append("<br>");
             } else {
-                // draw one asterisk, size - 2 spaces, then one asterisk
+                // draw one asterisk, size minus two number of spaces, then one asterisk for each line except the first and last
                 $("#displayArea").append("*");
                 for(let j = 0; j < size - 2; j++){$("#displayArea").append("&nbsp;");}
                 $("#displayArea").append("*");
@@ -130,6 +130,7 @@ $(function () {
     $("#submit").click(function () {
         usize = $("#numbox").val()
         if (usize < 2 || usize > 10){
+            $("#displayArea").css("letter-spacing", "0px");
             $("#displayArea").text("Looks like your input is out of range! Please input a number 2-10 to continue.");
         } else {
         $("#displayArea").text(" ");

@@ -22,3 +22,6 @@ table, th, td {
 #displayArea {
     margin-top: 10px;
 }
+#tabs-3 {
+    transition: height 4s;
+}
