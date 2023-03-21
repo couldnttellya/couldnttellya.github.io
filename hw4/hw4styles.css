@@ -8,10 +8,7 @@
 #tabs-1 div{
     margin: 10px;
 }
-#hw2description {
-    opacity:1;
-    transition: opacity 1s;
-}
+
 table, th, td {
     border: solid;
     border-collapse: collapse;

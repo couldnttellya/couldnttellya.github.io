@@ -7,6 +7,17 @@ $(function () {
         $("#hw2description").css("opacity", "0");
     });
 
+    for (let i = 0; i <= 8; i++){
+        $(`#hw${i}description`).css("opacity", "0");
+        $(`#hw${i}description`).css("transition", "opacity 1s");
+        $(`#hw${i}link`).mouseover(function(){
+            $(`#hw${i}description`).css("opacity", "1");
+        });
+        $(`#hw${i}link`).mouseout(function(){
+            $(`#hw${i}description`).css("opacity", "0");
+        });
+    }
+
     $( "#tabs" ).tabs();
 
     // tooltip -- hover on item displays label title
