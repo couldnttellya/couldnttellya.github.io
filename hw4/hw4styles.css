@@ -16,7 +16,7 @@ table, th, td {
     border: solid;
     border-collapse: collapse;
 }   
-#numbox {
+#numbox, #itable {
     margin-bottom: 10px;
 }
 #displayArea {

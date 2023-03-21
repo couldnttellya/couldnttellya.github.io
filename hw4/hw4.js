@@ -100,6 +100,7 @@ $(function () {
             if (j%2){$(row).css("background-color", "lightgrey")};
             //$("#itable").append("<tr><td>" + j + "</td><td>" + aod.toLocaleString(undefined, {maximumFractionDigits: 2}) + "</td></tr>");
         }
+        $("#itable").append("<br>");
         //$("#itable").append("</tbody></table>");
     }
 
