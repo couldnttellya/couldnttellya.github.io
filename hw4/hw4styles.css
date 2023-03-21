@@ -1,0 +1,24 @@
+#dragBox {
+    background-color: rgb(250, 235, 215, 0.5);
+    width: fit-content;
+    border-radius: 50%;
+    padding: 1em;
+    outline: auto;
+}
+#tabs-1 div{
+    margin: 10px;
+}
+#hw2description {
+    opacity:1;
+    transition: opacity 1s;
+}
+table, th, td {
+    border: solid;
+    border-collapse: collapse;
+}   
+#numbox {
+    margin-bottom: 10px;
+}
+#displayArea {
+    margin-top: 10px;
+}

@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="static/styles.css">
-<title>Joe's CNIT 133 hw4</title>
-
-<script>
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-  }
-</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon2.1.png">
+  <title>Joe's Javascript Looping Statements Homework for CNIT 133 at City College San Francisco</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="hw4/hw4styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="hw4/hw4.js" defer></script>
 
 </head>
 <body>
     <div id="mySidebar" class="sidebar">
-        <div class="side"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></div>
-        <div class="side"><a href="/index.html">Home</a></div>
-        <div class="side"><a href="/hw2.html">Homework 2</a></div>
-        <div class="side"><a href="/hw3.html">Homework 3</a></div>
-        <div class="side"><a href="/hw4.html">Homework 4</a></div>
+        <div class="side"><a href="javascript:void(0)" class="closebtn" id="closebtn">×</a></div>
+        <div class="side"><label title="Homepage"><a href="/index.html">Home</a></label></div>
+        <div class="side" id="hw2link"><label title="Basic Operations"><a href="/hw2.html">Homework 2<span id="hw2description"> - Basic Operations</span></a></label></div>
+        <div class="side"><label title="Functions"><a href="/hw3.html">Homework 3</a></label></div>
+        <div class="side"><label title="Looping Statements"><a href="/hw4.html">Homework 4</a></label></div>
         <div class="side"><a href="/hw5.html">Homework 5</a></div>
         <div class="side"><a href="/hw6.html">Homework 6</a></div>
         <div class="side"><a href="/hw7.html">Homework 7</a></div>
@@ -31,11 +26,40 @@
    </div>
    <div id="main">
     <div class="sticky-top">
-      <button class="openbtn" onclick="openNav()">☰</button>
+      <button class="openbtn" id="openbtn">☰</button>
 
-        <h1>Coming SOON!!!</h1>
-        <p>This will be Joe's fourth homework assignment for CNIT 133!</p>
+        <h1>CNIT 133 Homework 4 - Looping Statements</h1>
+        <p>This is Joe's fourth homework assignment for CNIT 133!</p>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">Part 1 - Draggable Product and Sum</a></li>
+            <li><a href="#tabs-2">Part 2 - Visualizing Compound Interest</a></li>
+            <li><a href="#tabs-3">Part 3 - Extra Credit</a></li>
+          </ul>
+          <div id="tabs-1">
+            <div id="dragBox">This DIV is <em>draggable</em></div>
+            <div id="prodResult">The product of </div>
+            <div id="sumResult">The sum of </div>
+            <div id="prodResult2">The product of </div>
+            <div id="sumResult2">The sum of </div>
+          </div>
+          <div id="tabs-2">
+            <h3>See below three tables depicting compound interest at progressive interest rates:</h3>
+            <div id="itable"></div>
+          </div>
+          <div id="tabs-3">
+            <h2>Build-a-Box</h2>
+            <h4>Input a number between 2-10 in the form below and hit submit to build a box!</h4>
+            <form>
+              <label for="numbox"><input type="number" id="numbox"></label>
+              <br>
+              <label for="submit"><button type="button" id="submit">Submit</button></label>
+              <label for="clear"><button type="button" id="clear">Clear</button></label>
+            </form>
+            <div id="displayArea"></div>
+          </div>
         </div>
-        </div>
+      </div>
+    </div>
 </body>
 </html>
