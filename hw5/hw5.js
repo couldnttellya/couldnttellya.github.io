@@ -75,7 +75,10 @@ $(function () {
 
     //                  PART 2
 
-    $("#select2").change(function(){
+    $("#select2").change(function(){ // removes error when a movie is selected from the second drop down
+        $("#errorArea").empty();
+    });
+    $("#select1").change(function(){ // removes error when a movie is selected from the first drop down
         $("#errorArea").empty();
     });
 
@@ -88,24 +91,24 @@ $(function () {
                     {"Abbr": "CA", "Name": "California", "Capital": "Sacramento", "Population": "39,512,223"},
                     {"Abbr": "CO", "Name": "Colorado", "Capital": "Denver", "Population": "5,758,736"}];
 
-    var stateInput = $("#state").val();
+    var stateInput = $("#state").val();    // update var for input each time user types 
     $("#state").change(function(){
         stateInput = $("#state").val();
     });
-    $("#stateLookupButton").click(function(){
+    $("#stateLookupButton").click(function(){           // lookup button push
+        $("#stateInfo").css("color", "black");
         var matchFound = false;
-        var stateUpper = stateInput.toUpperCase();
-        $("#stateInfo").empty();
-        console.log($("#state").val());
-        for (let i = 0; i < censusData.length; i++){
-            if(stateUpper == censusData[i].Name.toUpperCase() || stateUpper == censusData[i].Abbr){
-                console.log(`State input match: ${censusData[i].Abbr.toUpperCase()}`);
-                $("#stateInfo").append(`Thanks for your inquiry, here is the information you requested:<br>State abbr = ${censusData[i].Abbr}<br>State Name = ${censusData[i].Name}<br>Capital = ${censusData[i].Capital}<br>Population = ${censusData[i].Population}<br>`);
+        var stateUpper = stateInput.toUpperCase();      // user input to upper
+        $("#stateInfo").empty();                        // empty info area
+        for (let i = 0; i < censusData.length; i++){                                                // for each state in census data
+            if(stateUpper == censusData[i].Name.toUpperCase() || stateUpper == censusData[i].Abbr){ // if user input matches a state in the data
+                $("#stateInfo").append(`Thanks for your inquiry, here is the information you requested:<hr>State abbr = ${censusData[i].Abbr}<br>State Name = ${censusData[i].Name}<br>Capital = ${censusData[i].Capital}<br>Population = ${censusData[i].Population}<br>`);
                 $("#stateInfo").append(censusData[i]);
                 matchFound = true;
             }  
         }
-        if (!matchFound) {
+        if (!matchFound) { // if no match found show error message
+            $("#stateInfo").css("color", "red");
             $("#stateInfo").append(`Sorry, we don't have a state by that name or abbrevieation in our records.<br>`);
         }
     });
