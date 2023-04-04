@@ -1,0 +1,28 @@
+input {
+    margin: 10px;
+    padding: 0;
+}
+form {
+    display:flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+form section {
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+form button {
+    display:block !important;
+    flex-wrap: nowrap !important;
+}
+
+#results, #errorArea {
+    color: red;
+}
+#goButton {
+    padding: 10px;
+}
+#stateLookupButton, #stateClearButton{
+    padding: 2px;
+}

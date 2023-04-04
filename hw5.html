@@ -3,7 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="static/styles.css">
-<title>Joe's CNIT 133 hw5</title>
+<link rel="icon" type="image/x-icon" href="/static/images/favicon2.1.png">
+<title>Joe's Javascript Looping Statements Homework for CNIT 133 at City College San Francisco</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="hw5/hw5styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="hw5/hw5.js" defer></script>
 
 <script>
   function openNav() {
@@ -14,11 +20,30 @@
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
   }
+  function redirect1(form){
+      var destination = form.select1.options[form.select1.selectedIndex].value;
+      if (destination == 'empty'){
+        $("#errorArea").empty();
+        $("#errorArea").append("Select a website from one of the dropdown menus to proceed");
+      } else {
+        window.open(destination);
+      }
+    }
+    function redirect2(form){
+      var destination = form.select2.options[form.select2.selectedIndex].value;
+      if (destination == 'empty'){
+        $("#errorArea").empty();
+        $("#errorArea").append("Looks like you forgot to select a website to redirect to before hitting the go button!<br> Select a website from one of the dropdown menus to proceed");
+      } else {
+        window.open(destination);
+      }
+    }
+
 </script>
 
 </head>
 <body>
-    <div id="mySidebar" class="sidebar">
+  <div id="mySidebar" class="sidebar">
         <div class="side"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></div>
         <div class="side"><a href="/index.html">Home</a></div>
         <div class="side"><a href="/hw2.html">Homework 2</a></div>
@@ -28,14 +53,87 @@
         <div class="side"><a href="/hw6.html">Homework 6</a></div>
         <div class="side"><a href="/hw7.html">Homework 7</a></div>
         <div class="side"><a href="/hw8.html">Homework 8</a></div>
-   </div>
-   <div id="main">
+  </div>
+  <div id="main">
     <div class="sticky-top">
       <button class="openbtn" onclick="openNav()">☰</button>
 
-        <h1>Coming SOON!!!</h1>
-        <p>This will be Joe's fifth homework assignment for CNIT 133!</p>
+      <h1>CNIT 133 Homework 5 - Arrays</h1>
+      <p>This will be Joe's fifth homework assignment for CNIT 133!</p>
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Part 1 - Data Input & Validation</a></li>
+          <li><a href="#tabs-2">Part 2 - Pulldown Menu</a></li>
+          <li><a href="#tabs-3">Part 3 - State Locator</a></li>
+        </ul>
+        <div id="tabs-1">
+          <form>
+            <section id="nameinput">
+              <label>Input Name:<br><input type="text" id="name"></label>
+            </section>
+
+            <section id="ageselect" class="section1">
+              <label for="age">Select Age:</label><br>
+              <label><input type="radio" id="lt21" name="age" value="less than 21">Less than 21</label><br>
+              <label><input type="radio" id="bt2150" name="age" value="between 21 and 50">21 to 50</label><br>
+              <label><input type="radio" id="gt50" name="age" value="greater than 50">Greater than 50</label>
+            </section>
+            <section id="browserselect" class="section1">
+              <label for="checkbox">Select Browser:</label><br>
+              <label><input type="checkbox" id="firefox">Firefox</label><br>
+              <label><input type="checkbox" id="chrome">Chrome</label><br>
+              <label><input type="checkbox" id="safari">Safari</label><br>
+              <label><input type="checkbox" id="edge">Edge</label><br>
+              </section>
+            <section id="movieselect" class="section1">
+              <label for="movie">Select A Movie Genre:</label><br>
+              <select id="movies">
+                <option value="empty">Select a movie:</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Documentary">Documentary</option>
+                <option value="Science">Science Fiction</option>
+              </select>
+            </section>
+          </form>
+          <button type="button" id="submit">Submit</button>
+          <button type="button" id="clear">Clear</button>
+          <p id="results"></p>
         </div>
+        <div id="tabs-2">
+          <h1>Pulldown Links</h1>
+          <h3>Use the pulldown menus below to navigate to other pages on the world wide web!</h3>
+          <p>The first dropdown will navigate on change. The second dropdown will navigate when you click the go button.</p>
+          <form>
+            <select id="select1" onchange="redirect1(this.form);">
+              <option value="empty">Choose a Search engine</option>
+              <option value="http://Google.com">Google</option>
+              <option value="http://Bing.com">Bing</option>
+              <option value="http://Yahoo.com">Yahoo</option>
+            </select>
+            <select id="select2">
+              <option value="empty">Choose a Video platform</option>
+              <option value="http://Youtube.com">Youtube</option>
+              <option value="http://Vimeo.com">Vimeo</option>
+              <option value="http://Twitch.tv">Twitch</option>
+              <input type="button" id="goButton" value="Go" onclick="redirect2(this.form);">
+            </select>
+          </form>
+          <hr>
+          <section id="errorArea"></section>
         </div>
+        <div id="tabs-3">
+          <h1>Census Data</h1>
+          <form>
+            <label>Input the name of the state you'd like to look up: <input type="text" id="state"></label>
+            <input type="button" id="stateLookupButton" value="Lookup">
+            <input type="button" id="stateClearButton" value="Clear">
+          </form>
+          <p id="stateInfo"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
