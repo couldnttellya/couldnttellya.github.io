@@ -3,7 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="static/styles.css">
-<title>Joe's CNIT 133 hw6</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="hw6/hw6styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" 
+        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" 
+        crossorigin="anonymous"
+></script>
+<script src="hw6/hw6.js" defer></script>
+<title>Joe's CNIT 133 javascript homework 6 at San Francisco City College</title>
 
 <script>
   function openNav() {
@@ -33,8 +42,48 @@
     <div class="sticky-top">
       <button class="openbtn" onclick="openNav()">☰</button>
 
-        <h1>Coming SOON!!!</h1>
-        <p>This will be Joe's sixth homework assignment for CNIT 133!</p>
+        <h1>CNIT 133 Homework 6 - Objects</h1>
+        <p>This is Joe's sixth homework assignment for CNIT 133!</p>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">Part 1 - Decimal Work</a></li>
+            <li><a href="#tabs-2">Part 2 - Validating Text Input</a></li>
+            <li><a href="#tabs-3">Part 3 - Phone Number Validation</a></li>
+          </ul>
+          <div id="tabs-1">
+            <h2>Decimals</h2>
+            <h4>Input a number with <u>AT LEAST 4</u> decimals into the box below and hit submit</h4>
+            <form>
+              <input type="text" id="input1">
+            </form>
+            <button type="button" class="tab1button" id="submit">Submit</button>
+            <button type="button" class="tab1button" id="clear">Clear</button>
+            <section id="results1"></section>
+          </div>
+          <div id="tabs-2">
+            <h1>Validating Text Input</h1>
+            <form>
+              <label>Text Area:<br><textarea id="sec2textarea"></textarea><br></label>
+              <label>Single Char Input:<br><input type="text" maxlength="1" id="charinput"></label>
+            </form>
+            <button type="button" id="submit2">Submit</button>
+            <section id="results2"></section>
+          </div>
+          <div id="tabs-3">
+            <h1>Phone Number Validation</h1>
+            <h3>Input a 10 digit phone number to the box below</h3>
+            <h4>Use format (123) 456-7890</h4>
+            <form><input type="text" id="phoneNumber" name="phoneNumber"></form><br>
+            <button type="button" class="tab3button" id="submit3">Submit</button>
+            <button type="button" class="tab3button" id="clear3">Clear</button>
+            <form id="outputForm">
+              <input type="number" class="phoneNumber" id="areaCode">
+              <input type="number" class="phoneNumber" id="first3">
+              <input type="number" class="phoneNumber" id="last4"><br>
+            </form>
+            <section id="results3"></section>
+          </div>
+        </div>
         </div>
         </div>
 </body>
