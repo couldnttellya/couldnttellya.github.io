@@ -31,6 +31,7 @@ $(function () {
     //                  PART 2
 
     $("#submit2").click(function(){
+        $("#results2").empty();
         var str = $("#sec2textarea").val().toLowerCase();
         var pattern = $("#charinput").val();
         var re = new RegExp ($("#charinput").val().toLowerCase(), 'g');
@@ -63,7 +64,7 @@ $(function () {
     $('input[name="phoneNumber"]').mask('(000) 000-0000')
     $("#submit3").click(function(){
         var userNumber = $("#phoneNumber").val();
-        console.log(userNumber);
+        //console.log(userNumber);
         var phoneNumber = userNumber.split(/\D/).join("");
         if (phoneNumber.length == 10){
             $("#results3").empty();
