@@ -17,10 +17,9 @@
 .dropdownContent {
     display: none;
     position: absolute;
-    z-index: 1;
     background-color: lightgrey;
     border: solid 1px black;
-    
+    width: 20em;
   }
 
 .dropdownContent a {
