@@ -3,7 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="static/styles.css">
-<title>Joe's CNIT 133 hw7</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="hw7/hw7styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" 
+        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" 
+        crossorigin="anonymous"
+></script>
+<script src="hw7/hw7.js" defer></script>
+<title>Joe's CNIT 133 javascript homework 7 at San Francisco City College</title>
 
 <script>
   function openNav() {
@@ -29,13 +38,71 @@
         <div class="side"><a href="/hw7.html">Homework 7</a></div>
         <div class="side"><a href="/hw8.html">Homework 8</a></div>
    </div>
-   <div id="main">
-    <div class="sticky-top">
-      <button class="openbtn" onclick="openNav()">☰</button>
+    <div id="main">
+      <div class="sticky-top">
+        <button class="openbtn" onclick="openNav()">☰</button>
 
-        <h1>Coming SOON!!!</h1>
-        <p>This will be Joe's seventh homework assignment for CNIT 133!</p>
+          <h1 id="assTitle">CNIT 133 Homework 7 - Object Model and Event Model</h1>
+          <p id="assDescription"></p>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1" title="section 1" class="tab">Format Options</a></li>
+            <li><a href="#tabs-2" title="section 2" class="tab">Links</a></li>
+          </ul>
+          <div id="tabs-1">
+            <h2>Select from the menus below to transform the page</h2>
+            <form>
+              <section><h3>Select a Background Color</h3>
+                <label>beige<input type="radio" class="radio" id="beige" name="colorControl" value="beige"></label><br>
+                <label>grey<input type="radio" class="radio" id="grey" name="colorControl" value="lightgrey"></label><br>
+                <label>yellow<input type="radio" class="radio" id="yellow" name="colorControl" value="#ffffcc"></label><br>
+                <label>white<input type="radio" class="radio" id="white" name="colorControl" value="white"></label><hr>
+              </section>
+              <section><h3>Select a Format</h3>
+                <label>Bold<input type="checkbox" class="checkbox" id="Bold" name="Bold" value="bold"></label><br>
+                <label>Italics<input type="checkbox" class="checkbox" id="Italics" name="Italics" value="italics"></label><br>
+                <label>Underline<input type="checkbox" class="checkbox" id="Underline" name="Underline" value="u"></label><hr>
+              </section>
+              <section><h3>Select a Font Size</h3>
+                <select id="fontSize">
+                  <option value="1" class="select" id="selectDescription" name="selectDescription" selected="selected">Choose value below to change font size</option>
+                  <option value=".5em" class="select" id=".5" name="pointFive">.5em</option>
+                  <option value=".75em" class="select" id=".75" name="pointSevenFive">.75em</option>
+                  <option value="1em" class="select" id="1" name="one">1em</option>
+                  <option value="1.25em" class="select" id="1.25" name="onePointTwoFive">1.25em</option>
+                </select>
+              </section>
+            </form>
+          </div>
+          <div id="tabs-2">
+            <h2>Links to Previous assignments</h2><br>
+            <div class="dropdown">
+              <button class="dropdownButton" id="sec2button">Section 2</button>
+              <div class="dropdownContent">
+                <a href="/hw2/hw2.1.html">Part 1</a>
+                <a href="/hw2/hw2.1.html">Part 2</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdownButton">Section 3</button>
+              <div class="dropdownContent">
+                <a href="hw3.html#tabs-1">Part 1</a>
+                <a href="hw3.html#tabs-2">Part 2</a>
+                <a href="hw3.html#tabs-3">Part 3</a>
+                <a href="hw3.html#tabs-4">Part 4 (extra credit)</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdownButton">Section 4</button>
+              <div class="dropdownContent">
+                <a href="hw4.html#tabs-1">Part 1</a>
+                <a href="hw4.html#tabs-2">Part 2</a>
+                <a href="hw4.html#tabs-3">Part 3 (extra credit)</a>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-</body>
-</html>
+      </div>
+    </div>
+  </body>
+  </html>
