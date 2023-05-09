@@ -20,6 +20,7 @@
     background-color: lightgrey;
     border: solid 1px black;
     width: 20em;
+    border-radius: .25em;
   }
 
 .dropdownContent a {
