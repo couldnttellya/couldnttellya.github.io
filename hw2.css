@@ -1,0 +1,13 @@
+title {
+    font-weight:bold;
+    color:red;
+}
+books {
+    background-color: lightgrey;
+}
+books :nth-child(odd) {
+    background-color: lightblue;
+}
+book {
+    display:block;
+}
