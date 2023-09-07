@@ -14,7 +14,7 @@
 <td style="border:solid; border-color:blue"><xsl:value-of select="Phone"/></td>
 <td style="border:solid; border-color:blue"><xsl:value-of select="E-mail"/></td>
 
-<!--This is the if than statement to make the account values less than 80k show in red... I have no idea why it didn't work-->
+<!--This is the if than statement to make the account values less than 80k show in red-->
 
       <xsl:choose>
         <xsl:when test="Account_Total &lt; 80001">
@@ -28,8 +28,9 @@
 
 <!--
 <xsl:choose>
-    <xsl:when test="Account_Total &lt; 80001>">
-        <td style="text-align:right; border:solid; border-color:blue; color:red">$<xsl:value-of select="Account_Total"/></td>
+    <xsl:when test="Account_Total &lt; 80001">
+        <td style="text-align:right; border:solid; border-color:blue; color:red">
+        $<xsl:value-of select="Account_Total"/></td>
     </xsl:when>
     <xsl:otherwise>
         <td style="text-align:right; border:solid; border-color:blue">$<xsl:value-of select="Account_Total"/></td>
