@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Products [
 <!ELEMENT Products (Prod+)>
-<!ELEMENT Prod (Details|Quantity|Unit_Price|Loc)>
+<!ELEMENT Prod (Details,Quantity,Unit_Price,Loc)>
 <!ATTLIST Prod ProdID ID #REQUIRED>
-<!ELEMENT Details (Short_Desc | Long_Desc)>
-<!ELEMENT Short_Desc #PCDATA>
-<!ELEMENT Long_Desc #PCDATA>
-<!ELEMENT Quantity #PCDATA>
-<!ELEMENT Unit_Price #PCDATA>
-<!ENTITY Loc >
+<!ELEMENT Details (Short_Desc,Long_Desc)>
+<!ELEMENT Short_Desc (#PCDATA)>
+<!ELEMENT Long_Desc (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT Unit_Price (#PCDATA)>
+<!ENTITY Loc>
 ]>
 
 <Products>
