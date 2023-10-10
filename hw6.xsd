@@ -1,0 +1,31 @@
+<?xml version = "1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:annotation>
+  <xs:documentation>Just a simple XML Schema for hw6 in CNIT 131A course</xs:documentation>
+</xs:annotation>  
+<xs:element name="Member" />
+<xs:element name="Name">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="30" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+<xs:element name="Age" default="21">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="21" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="Job" type="xs:string" />
+<xs:element name="Date" type="xs:date" />
+<xs:element name="Phone">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}-\d{3}-\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+</xs:schema>
