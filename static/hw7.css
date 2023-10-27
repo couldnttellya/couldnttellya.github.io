@@ -1,0 +1,13 @@
+@namespace e "http://www.gov.org/east";
+
+*|state {
+    display:block;
+}
+
+state {
+    background-color: lightgray;
+}
+
+e|state {
+    background-color: lightblue;
+}
