@@ -13,18 +13,45 @@
         <h1 class="title">CNIT-131A - XML and JSON Assignment 8</h1>
         <h3 class="title">Understanding XQuery</h3>
         <ol class="answers">
-            <li class="part1">
-                <br><ul>
-                    <li>XQuery is used to search XML documents for elements and atributes.
+                    <li>XQuery is used to search XML documents for elements and atributes.<sup>1</sup>
                         It's main function is to allow a programmer to extract specific data. 
                         It's benifit is in its high level ease of use and versitility/power in extracting data.
-                        XQuery can also be used to transform XML into XHTML.
+                        XQuery can also be used to transform XML into XHTML.<sup>2</sup>
+                        It has a broad range of application in web service and for use in summary reports.
                     </li>
-                    <li>When hw8.xq is applied to hw8.xml it will select every book in bookstore where the price is less than 30 and return their titles</li>
-                </ul><br>
-            </li>
-            <li></li>
-            <li></li>
+                    <li>
+                        When hw8.xq is applied to hw8.xml it will select every book in bookstore where the price is less than 30 and return their titles as follows:<br>
+                        <div id="codeSnippet">
+                            xquery version "1.0";<br><br>
+
+                            for $b in<br>
+                            &emsp;   doc("hw8.xml")/bookstore/book<br><br>
+
+                            where <br>
+                            &emsp;   $b/price &lt; 30<br><br>
+
+                            return $b/title<br>
+                        </div>
+                        <ul>
+                            <li>The line "xquery version "1.0";" defines the xquery version being used</li>
+                            <li>The line "for $b in" creates a variable "$b"</li>
+                            <li>The line "doc("hw8.xml")/bookstore/book" looks in "hw8.xml" -> for each "bookstore" -> for each "book" and sets that array of returned elements into "$b"</li>
+                            <li>The line "where $b/price &lt; 30" selects all the books stored in $b where the price attribute is less than 30</li>
+                            <li>The line "return $b/title" returns the title attribute from all of the selected books in $b</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>What is XQIB?</h4><br>
+                        XQIB stands for XQuery In the Browser.<sup>1</sup>
+                        It can be used with XQuery to perform client side querys. 
+                    </li>
         </ol>
+        <div class="sources">
+            <h3>Sources:</h3>
+            <ul>
+                <li>1) Lecture Notes</li>
+                <li>2) w3 schools</li>
+            </ul>
+        </div>
     </body>
 </html>
