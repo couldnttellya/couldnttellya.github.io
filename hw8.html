@@ -21,7 +21,7 @@
                     </li>
                     <li>
                         When hw8.xq is applied to hw8.xml it will select every book in bookstore where the price is less than 30 and return their titles as follows:<br>
-                        <div id="codeSnippet">
+                        <div class="codeSnippet">
                             xquery version "1.0";<br><br>
 
                             for $b in<br>
@@ -41,9 +41,11 @@
                         </ul>
                     </li>
                     <li>
-                        <h4>What is XQIB?</h4><br>
+                        <h4>What is XQIB?</h4>
                         XQIB stands for XQuery In the Browser.<sup>1</sup>
-                        It can be used with XQuery to perform client side querys. 
+                        XQIB can be used with XQuery to perform client side XQuery operations in a browser just like you would with javascript<sup>3</sup>
+                        To do so one one only needs to include a the script:<sup>3</sup> <br><br><span class="codeSnippet">"&lt;script type="text/javascript"src="path/to/mxqueryjs/mxqueryjs.nocache.js"&gt;&lt;/script&gt;"</span><br>
+
                     </li>
         </ol>
         <div class="sources">
@@ -51,6 +53,7 @@
             <ul>
                 <li>1) Lecture Notes</li>
                 <li>2) w3 schools</li>
+                <li>3) XQIB.org</li>
             </ul>
         </div>
     </body>

@@ -12,7 +12,7 @@
 .title {
     text-align: center;
 }
-#codeSnippet{
+.codeSnippet{
     background-color: beige;
     width:fit-content;
     border-radius: 1em;
