@@ -1,0 +1,11 @@
+.answers {
+    margin-right: 20%;
+    margin-left: 5%;
+}
+.answers li{
+    margin-top: 1em;
+}
+.title {
+    margin: auto;
+    width: 50%;
+}
