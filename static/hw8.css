@@ -8,6 +8,7 @@
     border-radius: 2em;
     padding: 1em;
     background-color: lightblue;
+    margin-top: 1em;
 }
 .title {
     text-align: center;
@@ -17,6 +18,7 @@
     width:fit-content;
     border-radius: 1em;
     padding: 1em;
+    margin: 1em;
 }
 .sources {
     margin: 2em 20% 2em 5%;
