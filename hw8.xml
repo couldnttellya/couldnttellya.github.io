@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+   <book category="coding">
+      <title lang="en">XML is Easy</title>
+      <author>Lucy Smith</author>
+      <price>35.00</price>
+   </book>
+   <book category="children">
+      <title lang="en">Harry Potter</title>
+      <author>J K. Rowling</author>
+      <price>25.00</price>
+   </book>
+   <book category="coding">
+      <title lang="en">XQuery Kick Start</title>
+      <author>James McGovern</author>
+      <author>Per Bothner</author>
+      <author>Kurt Cagle</author>
+      <author>James Linn</author>
+      <author>Vaidyanathan Nagarajan</author>
+      <price>48.99</price>
+   </book>
+   <book category="coding">
+      <title lang="en">Learning HTML</title>
+      <author>Erik Johnson</author>
+      <price>42.00</price>
+    </book>
+   <book category="children">
+      <title lang="en">The Snowy Days</title>
+      <author>Ezra Keats</author>
+      <price>5.89</price>
+    </book>
+</bookstore>
