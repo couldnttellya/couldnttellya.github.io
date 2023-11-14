@@ -1,0 +1,13 @@
+.list li{
+    display:inline-block;
+    margin-left: 5em;
+    justify-content: center;
+}
+.descriptions {
+    text-align: center;
+}
+.svgs {
+    position:absolute;
+    left: 50%;
+    margin-left:-125px;
+}
