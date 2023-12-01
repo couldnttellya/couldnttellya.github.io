@@ -9,7 +9,15 @@ width="500px" height="500px">
     </linearGradient>
   </defs>
 
-<rect x="10" y="10" fill="yellow" stroke="blue" stroke-width="2px" width="120" height="60" />
-<circle fill="blue" cy="120" cx="50" r="40px" stroke="red" stroke-width="2px" />
+<polygon points="150,10 250,220 175,150 120,210" fill="url(#grad1)" stroke="purple" stroke-width="1">
+<animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 174 147"
+      to="360 174 147"
+      dur="2s"
+      repeatCount="1" />
+      </polygon>
 
 </svg>
