@@ -4,8 +4,8 @@ const navBarList = {
     'Homepage' : 'index.html',
     'Assignments' : 'assignments.html',
     'Contact' : 'contact.html',
-    'Handy JoeB' : 'http://handyjoeb.com/',
-    'Surf Journal' : '../surfJournal/index.html',
+    'Handy JoeB (external Site!)' : 'http://handyjoeb.com/',
+    'Surf Journal (external App!)' : '../surfJournal/index.html',
 };
 
 //      For loop to iterate through each item in the above object
