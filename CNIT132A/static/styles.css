@@ -1,18 +1,18 @@
-#navBar {
+#navBarPlaceholder {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: black;
 }
-#navBar li {
+#navBarPlaceholder li {
     float: left;
 }
-#navBar li a {
+#navBarPlaceholder li a {
     display: block;
     padding: 8px;
     color: white;
 }
-#navBar li a:hover {
+#navBarPlaceholder li a:hover {
     color: lightblue;
 }
