@@ -20,6 +20,7 @@ for (const property in navBarList){
     anchor.setAttribute("href", navBarList[property]);
     if (anchor.href.test('http') == true){
         anchor.setAttribute("target", "_blank");
+        console.log(`${anchor} passed the test`);
     }
     anchor.innerHTML = property;
 
