@@ -18,7 +18,7 @@ for (const property in navBarList){
 
     //  set anchor link and inner HTML
     anchor.setAttribute("href", navBarList[property]);
-    if (anchor.href.test('http/i') == true){
+    if (anchor.href.test('http') == true){
         anchor.setAttribute("target", "_blank");
     }
     anchor.innerHTML = property;
