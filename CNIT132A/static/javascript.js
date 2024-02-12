@@ -18,11 +18,13 @@ for (const property in navBarList){
 
     //  set anchor link and inner HTML
     anchor.setAttribute("href", navBarList[property]);
-    if (anchor.href.test('http') == true){
-        anchor.setAttribute("target", "_blank");
-        console.log(`${anchor} passed the test`);
-    }
     anchor.innerHTML = property;
+    
+    //  regex to open external sites in a new tab
+    let pattern = /external/;
+    if (pattern.test(anchor.innerHTML) == true){
+        anchor.setAttribute("target", "_blank");
+    }
 
     //  append anchor to list element and list element to navBarPlaceholder
     listItem.appendChild(anchor);
