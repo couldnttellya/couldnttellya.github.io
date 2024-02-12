@@ -18,6 +18,7 @@ for (const property in navBarList){
 
     //  set anchor link and inner HTML
     anchor.setAttribute("href", navBarList[property]);
+    anchor.setAttribute("target", "_blank");
     anchor.innerHTML = property;
 
     //  append anchor to list element and list element to navBarPlaceholder
