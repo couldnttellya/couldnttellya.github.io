@@ -4,6 +4,7 @@ const navBarList = {
     'Homepage' : 'index.html',
     'Assignments' : 'assignments.html',
     'Contact' : 'contact.html',
+    'Homework 3' : 'hw3.html',
     'Handy JoeB (external Site!)' : 'http://handyjoeb.com/',
     'Surf Journal (external App!)' : '../surfJournal/index.html',
 };

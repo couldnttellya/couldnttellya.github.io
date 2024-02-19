@@ -16,6 +16,6 @@
 #navBarPlaceholder li a:hover {
     color: lightblue;
 }
-#aboutMe, #title {
+#aboutMe, #title, .content {
     margin: 5%;
 }
