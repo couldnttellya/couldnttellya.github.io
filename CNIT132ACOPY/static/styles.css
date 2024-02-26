@@ -1,0 +1,21 @@
+#navBarPlaceholder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+#navBarPlaceholder li {
+    float: left;
+}
+#navBarPlaceholder li a {
+    display: block;
+    padding: 8px;
+    color: white;
+}
+#navBarPlaceholder li a:hover {
+    color: lightblue;
+}
+#aboutMe, #title, .content {
+    margin: 5%;
+}

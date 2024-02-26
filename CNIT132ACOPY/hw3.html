@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>San Francisco City College Advanced HTML and CSS Working with Images</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="CNIT-132A - Advanced HTML and CSS Working with Images CCSF City College San Francisco">
+        <link rel="stylesheet" href="static/styles.css">
+        <script src="static/javascript.js" defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSP02ZLHDX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+                
+          gtag('config', 'G-YSP02ZLHDX');
+        </script>
+    </head>
+    <body>
+        <ul id="navBarPlaceholder"></ul>
+        <h1 id="title">Working with Images</h1>
+        <figure>
+          <img src="static/images/mtn.jpg" alt="mountains" style="width:100%">
+          <figcaption>Fig.1 - Width: 2128, Height: 1596, Bytes: 575,320</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/mtnOptimized.jpg" alt="mountains" style="width:100%">
+          <figcaption>Fig.2 - Width: 2128, Height: 1596, Bytes: 270,790</figcaption>
+        </figure>
+        <p class="content">For this homework assignment I used the image compression tool found at this link: 
+          <a href="http://tinypng.com/">Tiny PNG Image Optimizer</a> to compress the image above. It appears to have
+        little to no quality loss while impressively having only half the file size as the original. Additionally the
+        compressed image took 216ms to load while the optimized image loaded in 163ms. That's nearly a 25% faster load 
+        time!</p>
+        <!--Tehachapi Mountains-->
+    </body>
+</html>
