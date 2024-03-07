@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Working with Grids</title>
+   <meta charset="utf-8">
+   <meta name="description" content="working with grids in CNIT 132A">
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSP02ZLHDX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+                
+          gtag('config', 'G-YSP02ZLHDX');
+        </script>
+   <style>
+      .page-layout {
+         display: grid; 
+         grid-template-columns: 50vw 50vw; 
+         grid-template-rows: 50vh 50vh; 
+      }
+	  .news, .links, .search, .messages {
+	     text-align: center;
+		 font-weight: bold;
+	  }
+	  .news {
+	     background-color: cyan;
+		 grid-column-start: 2;
+	  }
+	  .links {
+	     background-color: orange;
+		 grid-row-start: 1;
+		 grid-row-end: 2;
+		 grid-column-start: 2;
+		 grid-column-end: 3;
+	  }
+	  .search {
+	     background-color: violet;
+		 grid-row-start: 1;
+		 grid-row-end: 2;
+		 grid-column-start: 1;
+		 grid-column-end: 2;
+	  }
+	  .messages {
+	     background-color: red;
+		 grid-row-start: 2;
+		 grid-row-end: 3;
+		 grid-column-start: 1;
+		 grid-column-end: 2;
+	  }
+   </style>
+</head>
+<body>
+<div class="page-layout">
+  <div class="news">News</div>
+  <div class="links">Links</div>
+  <div class="search">Search</div>
+  <div class="messages">Messages</div>
+</div>
+</body>
+</html>
