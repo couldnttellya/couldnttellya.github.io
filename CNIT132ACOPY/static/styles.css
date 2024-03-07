@@ -19,3 +19,10 @@
 #aboutMe, #title, .content {
     margin: 5%;
 }
+.indent {
+    margin-left: 1vw;
+    padding-top: 0vh;
+}
+li {
+    padding-top: 1vh;
+}
