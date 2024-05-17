@@ -1,0 +1,18 @@
+.wrapper {
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.house { 
+    float: left;
+    shape-outside: url(house.png);
+    shape-margin: 10px;
+ }
+ h2 {
+    font-size: 1.8rem;
+ }
+ @container (max-width: 600px) {
+    h2 {
+       font-size: 1rem;
+    }
+ }

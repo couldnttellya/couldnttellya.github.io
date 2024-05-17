@@ -1,0 +1,40 @@
+* { background-color:#C0DEED;}
+
+@keyframes scroll {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @keyframes slideRight {
+    0% {left: calc(0% - 100px); opacity:0;}
+    75% {left: calc(100% - 210px);}
+    100% {left: calc(50% - 100px); opacity:100; transform: rotate(360deg) scale(200%);}
+  }
+
+  .animated-text {
+    opacity: 0;
+    animation: slideRight 2s forwards;
+    position:absolute;
+    display: inline-block;
+    margin-top: 175px;
+    background-color: azure;
+  }
+
+#sky {
+position:fixed;
+top:0px;left:0px;
+width:100%;
+height:100%;
+text-align:center;
+margin:0px;
+padding:0px;
+background-color:#C0DEED;
+background: url(clouds.png) center top repeat-x;
+padding-top:300px;
+padding-bottom:10px;
+animation: scroll 10s linear infinite;
+}
