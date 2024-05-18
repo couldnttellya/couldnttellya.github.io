@@ -11,7 +11,7 @@
 
   @keyframes slideRight {
     0% {left: calc(0% - 100px); opacity:0;}
-    75% {left: calc(100% - 210px);}
+    75% {left: calc(100% - 300px);}
     100% {left: calc(50% - 100px); opacity:100; transform: rotate(360deg) scale(200%);}
   }
 
