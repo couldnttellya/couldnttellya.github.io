@@ -1,1 +1,15 @@
 #navBarPlaceholder{list-style-type:none;margin:0;padding:0;overflow:hidden;background-color:#000}#navBarPlaceholder li{float:left}#navBarPlaceholder li a{display:block;padding:8px;color:#fff}#navBarPlaceholder li a:hover{color:lightblue}#aboutMe,#title,.content{margin:5%}.indent{margin-left:1vw;padding-top:0vh}li{padding-top:1vh}
+h1 {
+    align-self: center;
+}
+.wrapper {
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.me { 
+    max-width: 150px;
+    float: left;
+    shape-outside: url(static/images/me.jpg);
+    margin-right: 10px;
+ }
